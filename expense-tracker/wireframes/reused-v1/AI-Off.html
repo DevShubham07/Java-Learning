@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assistant not installed</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px">
+    <a href="../v2/V2-Settings.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+  </div>
+
+  <div style="flex-grow: 1; padding: 0 24px 16px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="align-self: flex-start; font-size: 12px; font-weight: 600; background: #EAEEF2; border-radius: 6px; padding: 4px 8px">Optional</span>
+      <h1 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.2">Add the on-device assistant</h1>
+      <p style="margin: 0; font-size: 14px; color: #424A53; line-height: 1.5">A small AI model that runs only on this phone. The app already works fully without it.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; gap: 10px; font-size: 14px"><span style="font-weight: 700">1</span><span>Ask questions about your money, in English or Hinglish</span></div>
+      <div style="display: flex; gap: 10px; font-size: 14px"><span style="font-weight: 700">2</span><span>Add expenses by typing or saying a sentence</span></div>
+      <div style="display: flex; gap: 10px; font-size: 14px"><span style="font-weight: 700">3</span><span>Read bank SMS formats the rules don't know</span></div>
+      <div style="display: flex; gap: 10px; font-size: 14px"><span style="font-weight: 700">4</span><span>One-line summary in the nightly review</span></div>
+    </div>
+
+    <div style="border: 1px solid #D0D7DE; border-radius: 14px; padding: 4px 14px">
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span style="color: #57606A">Download</span><strong>about 2.4 GB</strong></div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span style="color: #57606A">Free space</span><span>[x] GB · OK</span></div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; font-size: 14px"><span style="color: #57606A">Phone memory (RAM)</span><span>[x] GB · OK</span></div>
+    </div>
+
+    <label style="display: flex; align-items: center; gap: 12px; font-size: 14px">
+      <span style="flex-grow: 1">Download on Wi-Fi only</span>
+      <input type="checkbox" role="switch" checked style="width: 44px; height: 24px">
+    </label>
+
+    <div style="border: 1px dashed #8C959F; border-radius: 12px; padding: 10px 12px; font-size: 12px; color: #424A53; line-height: 1.4">Low-RAM phone: this card says "Not supported on this phone" and the button is hidden. Nothing else in the app changes.</div>
+  </div>
+
+  <div style="border-top: 1px solid #D0D7DE; padding: 12px 16px 24px">
+    <a href="Downloads.html" style="height: 52px; border-radius: 26px; background: #0B57D0; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Download model</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

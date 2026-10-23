@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accounts</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F8FA; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px">
+    <a href="../v2/V2-Account.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <h1 style="margin: 0; flex-grow: 1; font-size: 20px; font-weight: 600">Accounts</h1>
+    <button type="button" style="height: 40px; padding: 0 12px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">+ Add</button>
+  </div>
+
+  <div style="flex-grow: 1; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden">
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 20px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 13px; color: #57606A">Net position</span>
+      <span style="font-size: 30px; font-weight: 700">₹[net]</span>
+      <span style="font-size: 12px; color: #57606A">Banks + wallets + cash − card dues</span>
+      <div style="display: flex; gap: 16px; font-size: 13px; padding-top: 4px"><span>October in <strong>₹[in]</strong></span><span>out <strong>₹[out]</strong></span></div>
+    </div>
+
+    <a href="Account-Confirm.html" style="display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 2px solid #1F2328; border-radius: 14px; padding: 12px 14px; color: #1F2328; text-decoration: none; font-size: 14px">
+      <span style="flex-grow: 1"><strong>New: SBI ••0042</strong> found in an SMS. Is it yours?</span><span style="font-weight: 600">Check ›</span>
+    </a>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 20px; padding: 4px 16px">
+      <div style="padding: 10px 0 2px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606A; letter-spacing: 0.06em">BANKS</div>
+      <a href="Account-Detail.html" style="display: flex; align-items: center; height: 56px; border-bottom: 1px solid #EAEEF2; color: #1F2328; text-decoration: none; gap: 8px">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500">HDFC Savings ••1102</span><span style="font-size: 12px; color: #57606A">as of today 7:15 pm</span></span><span style="font-weight: 600">₹[bal]</span>
+      </a>
+      <div style="display: flex; align-items: center; height: 56px; gap: 8px">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500">ICICI Savings ••7781</span><span style="font-size: 12px; color: #57606A">as of 19 Oct · no newer SMS</span></span><span style="font-weight: 600">₹[bal]</span>
+      </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 20px; padding: 4px 16px">
+      <div style="padding: 10px 0 2px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606A; letter-spacing: 0.06em">CREDIT CARDS</div>
+      <a href="Card-Detail.html" style="display: flex; flex-direction: column; gap: 6px; padding: 10px 0 12px; color: #1F2328; text-decoration: none">
+        <span style="display: flex; justify-content: space-between"><span style="font-size: 15px; font-weight: 500">HDFC Credit ••4321</span><span style="font-weight: 600">−₹[due]</span></span>
+        <span style="height: 6px; border-radius: 3px; background: #EAEEF2; display: flex"><span style="width: 38%; border-radius: 3px; background: #1F2328"></span></span>
+        <span style="font-size: 12px; color: #57606A">38% of limit used · due 4 Nov</span>
+      </a>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 20px; padding: 4px 16px">
+      <div style="padding: 10px 0 2px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606A; letter-spacing: 0.06em">WALLETS &amp; CASH</div>
+      <div style="display: flex; align-items: center; height: 48px; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; font-size: 15px">PhonePe UPI Lite</span><span style="font-weight: 600">₹[bal]</span></div>
+      <div style="display: flex; align-items: center; height: 48px"><span style="flex-grow: 1; font-size: 15px">Cash</span><span style="font-weight: 600">₹[cash]</span></div>
+    </div>
+    <span style="font-size: 13px; color: #57606A; text-align: center">1 hidden account · Show</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

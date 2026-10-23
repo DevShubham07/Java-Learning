@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rent and bills</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F6F8FA; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 16px 16px 8px; display: flex; align-items: center; gap: 4px">
+    <a href="V2-Month.html" aria-label="Back to month" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px">
+      <h1 style="margin: 0; font-size: 20px; font-weight: 600">Rent &amp; bills</h1>
+      <span style="font-size: 13px; color: #424A53">October</span>
+    </div>
+    <a href="V2-Bill-Add.html" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; box-sizing: border-box; font-size: 14px; font-weight: 600; color: #1F2328; display: flex; align-items: center; text-decoration: none">+ Add</a>
+  </div>
+
+  <div style="flex-grow: 1; padding: 4px 16px 12px; display: flex; flex-direction: column; gap: 12px; overflow: hidden">
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 16px; padding: 4px 14px; display: flex; flex-direction: column">
+      <div style="display: flex; justify-content: space-between; align-items: center; min-height: 48px"><strong style="font-size: 15px">I pay · 3 of 4 done</strong><span style="font-size: 13px; color: #424A53">your part ₹[x]</span></div>
+      <a href="V2-Rent-Pay.html" style="display: flex; align-items: center; gap: 10px; min-height: 64px; border-top: 1px solid #EAEEF2; color: #1F2328; text-decoration: none">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">Rent · Flat 4C</span><span style="font-size: 12px; color: #424A53">To landlord · split with 2 flatmates</span></span>
+        <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-size: 13px; font-weight: 600">✓ Paid 1 Oct</span><span style="font-size: 12px; color: #424A53">₹[x]</span></span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 64px; border-top: 1px solid #EAEEF2">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">Electricity</span><span style="font-size: 12px; color: #424A53">Usually around the 10th · ~₹[x]</span></span>
+        <button type="button" style="min-height: 44px; padding: 0 12px; border-radius: 22px; border: 2px solid #7A3A06; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #7A3A06">Not paid · Mark</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 56px; border-top: 1px solid #EAEEF2">
+        <span style="flex-grow: 1; font-size: 15px">Wi-Fi</span><span style="font-size: 13px; font-weight: 600">✓ Paid 4 Oct</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 56px; border-top: 1px solid #EAEEF2">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">House help</span><span style="font-size: 12px; color: #424A53">Cash</span></span><span style="font-size: 13px; font-weight: 600">✓ Paid 2 Oct</span>
+      </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D7DE; border-radius: 16px; padding: 4px 14px; display: flex; flex-direction: column">
+      <div style="display: flex; justify-content: space-between; align-items: center; min-height: 48px"><strong style="font-size: 15px">I collect · 1 of 2 received</strong><span style="font-size: 13px; color: #424A53">₹[x] of ₹[x]</span></div>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 64px; border-top: 1px solid #EAEEF2">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">Flat 2B · Neha</span><span style="font-size: 12px; color: #424A53">Matched from their UPI · 3 Oct</span></span>
+        <span style="font-size: 13px; font-weight: 600">✓ Received</span>
+      </div>
+      <a href="V2-Rent-Collect.html" style="display: flex; align-items: center; gap: 10px; min-height: 64px; border-top: 1px solid #EAEEF2; color: #1F2328; text-decoration: none">
+        <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">Flat 3A · Vikram</span><span style="font-size: 12px; color: #7A3A06; font-weight: 600">₹[x] pending · due 5 Oct</span></span>
+        <span style="font-size: 13px; font-weight: 600; color: #0B57D0">Open ›</span>
+      </a>
+    </div>
+    <span style="font-size: 12px; color: #424A53; line-height: 1.4">Status updates itself when a matching payment arrives. No due-date notifications; you check here or on Month.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

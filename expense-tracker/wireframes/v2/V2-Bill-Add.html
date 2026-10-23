@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Add a monthly bill or rent</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 16px 16px 8px; display: flex; align-items: center; gap: 4px; border-bottom: 1px solid #D0D7DE">
+    <a href="V2-Bills.html" aria-label="Cancel" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+    <h1 style="margin: 0; font-size: 20px; font-weight: 600">New monthly item</h1>
+  </div>
+
+  <div style="flex-grow: 1; padding: 10px 16px; display: flex; flex-direction: column; gap: 10px; overflow: hidden">
+    <div role="radiogroup" aria-label="Direction" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: #EAEEF2; border-radius: 14px; padding: 4px; gap: 4px">
+      <button type="button" role="radio" aria-checked="true" style="min-height: 48px; border-radius: 10px; border: none; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #1F2328">I pay</button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 48px; border-radius: 10px; border: none; background: transparent; font: inherit; font-size: 15px; color: #424A53">I collect</button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 14px; font-weight: 600">What is it?</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: none; background: #1F2328; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Rent</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Electricity</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Wi-Fi</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Maintenance</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">House help</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Other</button>
+      </div>
+    </div>
+
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name
+      <input type="text" value="Rent · Flat 4C" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box">
+    </label>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Amount
+        <input type="text" placeholder="₹" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box; width: 100%">
+      </label>
+      <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Due every month on
+        <select style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 10px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; background: #FFFFFF"><option>5th</option></select>
+      </label>
+    </div>
+    <label style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px"><input type="checkbox" style="width: 22px; height: 22px">Amount changes each month (e.g. electricity)</label>
+    <div role="radiogroup" aria-label="Who do you pay" style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 14px; font-weight: 600">Who do you pay?</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <button type="button" role="radio" aria-checked="true" style="min-height: 48px; border-radius: 12px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">Landlord directly</button>
+        <button type="button" role="radio" aria-checked="false" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">My share to a flatmate</button>
+      </div>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Landlord's name or UPI ID <span style="font-weight: 400; color: #424A53; font-size: 12px">Used to mark the month paid automatically</span>
+      <input type="text" placeholder="e.g. [landlord]@okicici" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box">
+    </label>
+    <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #8C959F; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328; padding: 0 12px"><span>Split with flatmates</span><span style="font-weight: 600">Rohit, Sana ›</span></button>
+  </div>
+
+  <div style="border-top: 1px solid #D0D7DE; padding: 12px 16px 24px">
+    <a href="V2-Bills.html" style="min-height: 52px; border-radius: 26px; background: #0B57D0; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Save</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

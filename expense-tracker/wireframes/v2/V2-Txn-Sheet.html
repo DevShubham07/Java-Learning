@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Payment detail sheet</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #6E7781; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <a href="V2-Money.html" aria-label="Close" style="height: 64px; flex-shrink: 0"></a>
+  <div role="dialog" aria-label="Payment: Blue Tokai Coffee ₹840" style="flex-grow: 1; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 10px 16px 20px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+    <div style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #8C959F"></div>
+    <div style="display: flex; align-items: flex-start; gap: 8px">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: 32px; font-weight: 700">₹840</span>
+        <button type="button" style="align-self: flex-start; min-height: 44px; padding: 0; border: none; background: transparent; font: inherit; font-size: 17px; font-weight: 600; color: #1F2328; text-align: left">Blue Tokai Coffee ✎</button>
+        <span style="font-size: 13px; color: #424A53">Thu 23 Oct, 8:42 pm · your share ₹280</span>
+      </div>
+      <a href="V2-Money.html" aria-label="Close" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </a>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 13px; font-weight: 600">Type</span>
+      <div style="display: flex; gap: 8px; overflow: hidden">
+        <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: none; background: #1F2328; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; flex-shrink: 0">Spent</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328; flex-shrink: 0">Between my accounts</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328; flex-shrink: 0">Don't count</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #EAEEF2">
+      <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 15px; color: #1F2328; padding: 0"><span style="color: #424A53">Category</span><span>Food &amp; drink ›</span></button>
+      <a href="V2-Split-Sheet.html" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 15px; color: #1F2328; text-decoration: none"><span style="color: #424A53">Split</span><span>You, Rahul, Aman · ₹280 each ›</span></a>
+      <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 15px; color: #1F2328; padding: 0"><span style="color: #424A53">Paid from</span><span>HDFC Card ••4321 · UPI ›</span></button>
+      <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 15px; color: #1F2328; padding: 0"><span style="color: #424A53">Place</span><span>Cyber Hub ›</span></button>
+      <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 15px; color: #1F2328; padding: 0"><span style="color: #424A53">Bill or trip</span><span>None ›</span></button>
+      <button type="button" style="min-height: 52px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 15px; color: #1F2328; padding: 0"><span style="color: #424A53">Note, tags, receipt</span><span>Add ›</span></button>
+    </div>
+
+    <details style="border: 1px solid #D0D7DE; border-radius: 12px; padding: 0 12px">
+      <summary style="min-height: 48px; display: flex; align-items: center; font-size: 14px; font-weight: 600; cursor: pointer">Original SMS · HDFCBK</summary>
+      <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #424A53; line-height: 1.5">[message exactly as received]</p>
+    </details>
+    <span style="font-size: 12px; color: #424A53">Changes save as you go and are remembered for this merchant. Tap the amount or date to fix a wrong reading (the original SMS is kept). Cash entries you added yourself can also be deleted.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

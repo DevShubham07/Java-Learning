@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review time and app lock</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; padding: 32px 24px 24px; gap: 20px; overflow: hidden">
+  <div style="display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; gap: 6px">
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #D0D7DE"></div>
+    </div>
+    <div style="font-size: 13px; color: #57606A">Step 4 of 5</div>
+    <h1 style="margin: 0; font-size: 24px; font-weight: 600">When should we check in?</h1>
+    <p style="margin: 0; font-size: 14px; color: #424A53; line-height: 1.5">One reminder a night, nothing during the day.</p>
+  </div>
+
+  <div style="border: 1px solid #D0D7DE; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+    <div style="font-size: 13px; color: #57606A">Nightly review at</div>
+    <button type="button" style="border: none; background: transparent; font: inherit; font-size: 44px; font-weight: 600; color: #1F2328; padding: 0">9:30 pm</button>
+    <div style="display: flex; gap: 8px">
+      <button type="button" style="height: 36px; padding: 0 12px; border-radius: 18px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">9:00</button>
+      <button type="button" style="height: 36px; padding: 0 12px; border-radius: 18px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">9:30</button>
+      <button type="button" style="height: 36px; padding: 0 12px; border-radius: 18px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">10:00</button>
+      <button type="button" style="height: 36px; padding: 0 12px; border-radius: 18px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">10:30</button>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606A; text-transform: uppercase; letter-spacing: 0.06em; padding-bottom: 4px">Privacy</div>
+    <label style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Fingerprint lock</strong><span style="font-size: 13px; color: #57606A">PIN if fingerprint fails</span></span>
+      <input type="checkbox" role="switch" checked style="width: 44px; height: 24px">
+    </label>
+    <label style="display: flex; align-items: center; gap: 12px; padding: 14px 0">
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Hide amounts</strong><span style="font-size: 13px; color: #57606A">On Home and the widget, until you tap</span></span>
+      <input type="checkbox" role="switch" style="width: 44px; height: 24px">
+    </label>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+  <a href="../v2/V2-Onb-Rent.html" style="height: 52px; border-radius: 26px; background: #1F2328; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Set PIN &amp; continue</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

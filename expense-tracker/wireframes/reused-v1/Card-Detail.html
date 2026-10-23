@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Credit card</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px">
+    <a href="Accounts.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 17px; font-weight: 600">HDFC Credit ••4321</span>
+      <span style="font-size: 12px; color: #57606A">RuPay · also used on UPI</span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+    <div style="border: 2px solid #1F2328; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 13px; color: #57606A">Due on 4 Nov</span><span style="font-size: 12px; font-weight: 600; background: #EAEEF2; border-radius: 4px; padding: 2px 6px">in 12 days</span></div>
+      <span style="font-size: 30px; font-weight: 700">₹[statement]</span>
+      <span style="font-size: 12px; color: #57606A">Last statement · from SMS on 15 Oct</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <div style="border: 1px solid #D0D7DE; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #57606A">Unbilled so far</span><span style="font-size: 18px; font-weight: 600">₹[unbilled]</span></div>
+      <div style="border: 1px solid #D0D7DE; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #57606A">Limit</span><span style="font-size: 18px; font-weight: 600">₹[limit]</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; font-size: 13px"><span>Limit used</span><strong>38%</strong></div>
+      <div style="height: 8px; border-radius: 4px; background: #EAEEF2; display: flex"><div style="width: 38%; border-radius: 4px; background: #1F2328"></div></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #EAEEF2">
+      <div style="padding: 12px 0 4px; font-size: 12px; color: #57606A">UNBILLED</div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Blue Tokai Coffee</span><span style="font-size: 12px; color: #57606A">Today · UPI on card</span></span><span style="font-weight: 600">₹840</span></div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Netflix</span><span style="font-size: 12px; color: #57606A">20 Oct · recurring</span></span><span style="font-weight: 600">₹[x]</span></div>
+      <a href="../v2/V2-Money.html" style="height: 44px; display: flex; align-items: center; font-size: 14px; font-weight: 600; text-decoration: none">All card transactions</a>
+    </div>
+    <div style="font-size: 12px; color: #57606A">Paying the bill from your bank is counted as a self-transfer, so card purchases are never counted twice.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

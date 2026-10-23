@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pick category sheet</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #6E7781; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <a href="V2-Today.html" aria-label="Close" style="height: 120px; flex-shrink: 0"></a>
+  <div role="dialog" aria-label="Category for Blue Tokai Coffee" style="flex-grow: 1; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 10px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+    <div style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #8C959F"></div>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-size: 18px; font-weight: 600">Category</span>
+        <span style="font-size: 13px; color: #424A53">Blue Tokai Coffee · ₹840 (your share ₹280)</span>
+      </div>
+      <a href="V2-Today.html" aria-label="Close" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </a>
+    </div>
+
+    <label style="display: flex; align-items: center; gap: 8px; min-height: 48px; border-radius: 24px; background: #F6F8FA; border: 1px solid #8C959F; padding: 0 16px; box-sizing: border-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#424A53" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4.5-4.5"></path></svg>
+      <input type="search" placeholder="Find or create a category" aria-label="Find category" style="flex-grow: 1; border: none; background: transparent; font: inherit; font-size: 15px; color: #1F2328; outline: none">
+    </label>
+
+    <span style="font-size: 13px; color: #424A53">October so far, your share in each</span>
+    <div role="radiogroup" aria-label="Categories" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <button type="button" role="radio" aria-checked="true" style="min-height: 64px; border-radius: 14px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Food &amp; drink</strong><span style="font-size: 12px; color: #424A53">₹4,920 · 82% of budget</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Rent &amp; home</strong><span style="font-size: 12px; color: #424A53">₹[x]</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Transport</strong><span style="font-size: 12px; color: #424A53">₹[x]</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Groceries</strong><span style="font-size: 12px; color: #424A53">₹[x]</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Bills &amp; utilities</strong><span style="font-size: 12px; color: #424A53">₹[x]</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Shopping</strong><span style="font-size: 12px; color: #424A53">₹[x] · over budget</span></button>
+      <button type="button" role="radio" aria-checked="false" style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; color: #1F2328; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 8px 12px; gap: 2px"><strong style="font-size: 15px">Health</strong><span style="font-size: 12px; color: #424A53">₹[x]</span></button>
+      <button type="button" style="min-height: 64px; border-radius: 14px; border: 1px dashed #8C959F; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #0B57D0">+ New category</button>
+    </div>
+
+    <label style="display: flex; align-items: center; gap: 12px; min-height: 52px; font-size: 15px">
+      <span style="flex-grow: 1">Always use for Blue Tokai Coffee</span>
+      <input type="checkbox" role="switch" checked style="width: 44px; height: 24px">
+    </label>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

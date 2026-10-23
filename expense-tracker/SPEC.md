@@ -1,22 +1,22 @@
 # Personal Expense Tracker — Build Spec (complete)
 
-> **For Claude Code.** This file is the full written spec. The screens live on the wireframe canvas:
-> https://claude.ai/artifact/MSPvqa51JrbTWt2SmzeubR
-> — page **"v2 · current"** = source of truth for screens, layout and navigation
-> — page **"v1 · old"** = used only for the screens listed in §1.5
-> — this file (also on canvas page **"0 · Build spec"**) = source of truth for behaviour, data and rules.
-> Where v1 and v2 differ, **v2 wins**. Values like ₹[x] or [N] are placeholders for computed data; names (Rahul, Sana, Flat 4C…) are sample data.
+> **For Claude Code.** This folder is the whole input; nothing else is needed.
+> - `SPEC.md` (this file) is the source of truth for behaviour, data and rules.
+> - `wireframes/v2/` + `screens/v2/` are the source of truth for screens, layout and navigation (HTML you can open, plus a PNG of each). `SCREENS.md` lists every screen, its file and where each button goes.
+> - `wireframes/reused-v1/` + `screens/reused-v1/` hold only the old screens §1.5 says to reuse. Where they differ from v2, **v2 wins**.
+> - The same material lives on the canvas https://claude.ai/artifact/MSPvqa51JrbTWt2SmzeubR (private) for people.
+> - In the wireframes, values like ₹[x] or [N] stand for computed data; names (Rahul, Sana, Flat 4C…) are sample data. Each HTML file is a static mock: ignore `support.js`, `{{accent}}` (= #0B57D0) and the `x-dc` / `DCLogic` wrapper.
 
 ---
 
 ## Prompt for Claude Code (copy as is)
 
 ```
-Build the Android app described in this canvas and in expense-tracker-spec.md.
-Read the spec first: it defines stack, data model, money rules, SMS engine, categories, alerts and build order.
-Build screens exactly as on page "v2 · current". Use page "v1 · old" only for the screens §1.5 lists as reused; where v1 and v2 differ, v2 wins.
+Build the Android app described in the expense-tracker/ folder.
+Read expense-tracker/SPEC.md completely first: it defines stack, data model, money rules, SMS engine, backup, categories, alerts and build order.
+Then read expense-tracker/SCREENS.md and look at every PNG in expense-tracker/screens/. Build the screens as drawn in screens/v2 (the HTML in wireframes/v2 gives exact text, sizes and links). Use screens/reused-v1 only for the screens SPEC.md §1.5 lists; where they differ from v2, v2 wins.
 Kotlin + Jetpack Compose + Material 3, Room + SQLCipher, no network APIs, no analytics, no Play Services location.
-Work phase by phase from §5. After each phase: build an APK, run unit tests for the money rules (§4) and the SMS engine corpus (§6), and stop for my review.
+Work phase by phase from §5. After each phase: build an APK, run unit tests for the money rules (§4), the SMS engine corpus (§6) and backup round-trip (§7), and stop for my review.
 Placeholders like ₹[x] and [N] are computed values; names are sample data.
 ```
 
@@ -40,6 +40,7 @@ A single-user Android app (sideloaded APK) that is a complete personal money man
 
 ### 1.3 Navigation
 Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear icon on Today. Detail, split, category, person, "not mine", "money received" etc. open as **bottom sheets** over the current tab.
+Not reached by a button (by design): 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today (nothing left / 2+ days unanswered). Back from any reused v1 screen returns to the v2 screen that opened it.
 
 ### 1.4 Screen map (v2 artboard titles)
 | Area | Screens |
@@ -50,13 +51,13 @@ Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear ic
 | Month | 3.1 In / out / saved · 3.2 Where it went · 3.3 Year |
 | Rent & bills | 4.1 This month · 4.2 Rent I pay · 4.3 Rent I collect · 4.4 Add a monthly bill |
 | Add & People | 5.1 Add sheet: spent · 5.6 Add sheet: received · 5.2 People · 5.3 Person sheet · 5.4 Trip · 5.5 Manage people |
-| Settings | 6.1 Settings · 6.2 Setup: rent step · 6.3 Alerts |
+| Settings | 6.1 Settings · 6.2 Setup: rent step · 6.3 Alerts · 6.4 Backup, import & export · 6.5 Lock & share file · 6.6 Restore (also from Welcome and "Open with" from WhatsApp) |
 | More situations | 7.1 Locked phone · 7.2 Widget · 7.3 Investment / EMI · 7.4 Reimbursement · 7.5 Add person · 7.6 Start trip · 7.7 Count your cash |
 
 ### 1.5 Reused from v1 (build as drawn, restyled to v2 rules)
-- **Onboarding:** O0 Welcome, O1 Permissions, O2 Banks & apps, O3 First places, O4 Review time & lock, C9 Import past SMS. Insert v2 **6.2 Rent step** as step 5, before Import.
-- P1 App lock · P4 Permission health · P6/P7 AI model & map data · P2/P3 Backup & export · P9 Merchant memory & rules · L5–L7 Places · A1/A2 Ask (opened from a search bar on Money, only when the AI model is installed) · A4 Assistant not installed.
-- Opened from v2 buttons: **S3** Someone else paid (= 1.3 with "Someone else paid") · **S7/S8** Settle up (Person sheet › Record payment) · **I3** Budgets (3.2 › Edit budgets; add a "Whole month" limit) · **I4** Subscriptions and **I2** Spending map (3.2 buttons) · **K1/K10** New account found / edit account · **R5** Nothing to answer today (Today empty state).
+- **Onboarding:** O0 Welcome, O1 Permissions, O2 Banks & apps, O3 First places, O4 Review time & lock, C9 Import past SMS (O0 has "I have a backup file" → 6.6). Insert v2 **6.2 Rent step** as step 5, before Import.
+- P1 App lock · P4 Permission health · P6/P7 AI model & map data · P9 Merchant memory & rules · L5–L7 Places · A1/A2 Ask (opened from a search bar on Money, only when the AI model is installed) · A4 Assistant not installed.
+- Opened from v2 buttons: **S3** Someone else paid (= 1.3 with "Someone else paid") · **S7/S8** Settle up (Person sheet › Record payment) · **I3** Budgets (3.2 › Edit budgets; add a "Whole month" limit) · **I4** Subscriptions and **I2** Spending map (3.2 buttons) · **K1/K10** New account found / edit account · **K6** Credit card detail (bill amount and status only, no reminders) · **R5** Nothing to answer today (Today empty state).
 - Features carried over from v1 (do not lose them):
   - **T1 Filters** — Money › Filters: date range, method, person, place, trip, answer status.
   - **T3/T5 Select many** — Money › Select: recategorise, split, merge duplicates, ignore in bulk.
@@ -73,7 +74,7 @@ Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear ic
 - C10 Unparsed SMS is replaced by the "Couldn't read" card on 2.3.
 
 ### 1.6 Do not build from v1
-R1, R2, R4 and R6 review flow (replaced by Today and 1.8; R3 only for its payee-naming field), S1/S2/S4 split screens (replaced by 1.3), H1/H2 Home, T1 list and T2/T4 detail (replaced by Money and 2.4), I1 Insights screen (replaced by Month; its trend lives on 3.3), More/Settings, v1 Notification set (replaced by 6.3). **Remove the card-due reminder entirely.**
+R1, R2, R4 and R6 review flow (replaced by Today and 1.8; R3 only for its payee-naming field), S1/S2/S4 split screens (replaced by 1.3), H1/H2 Home, T1 list and T2/T4 detail (replaced by Money and 2.4), I1 Insights screen (replaced by Month; its trend lives on 3.3), More/Settings, v1 Notification set (replaced by 6.3), P2/P3 Backup (replaced by 6.4–6.6). **Remove the card-due reminder entirely.**
 
 ### 1.7 Targets
 APK under 15 MB without the AI model · cold start to Today under 1 s · answering 10 payments under 60 s · cash add under 10 s · optional AI model ≈ 2.4 GB downloaded later · offline map + places for Delhi NCR under 150 MB · location log every 15–30 min, paused when stationary.
@@ -94,7 +95,7 @@ APK under 15 MB without the AI model · cold start to Today under 1 s · answeri
 | On-device AI (optional) | LiteRT-LM running Gemma 4 E2B with tool calls over fixed DB queries; loaded only while in use |
 | Voice | Android on-device SpeechRecognizer (offline) |
 | Security | BiometricPrompt with PIN fallback; FLAG_SECURE on screens with amounts |
-| Backup | AES-encrypted file export; share sheet (ciphertext only); CSV export; tax PDFs |
+| Backup | Encrypted .etb file (§7): nightly auto, share to WhatsApp/Drive, import/restore, merge; readable Excel/CSV/PDF export; tax PDFs |
 | Widget | Jetpack Glance home-screen widget (7.2) |
 
 **Never include:** Firebase, Crashlytics, any analytics SDK, Google Maps SDK, Play Services location/geocoder, any cloud LLM or network API. Internet permission is for one-way downloads only (AI model, map data).
@@ -122,12 +123,14 @@ Skipping is allowed; a missing permission shows a persistent "Fix" banner on Set
 | Nightly notifier | At review time posts an **ongoing** notification (setOngoing, not dismissible) with the count of unanswered items and Mine / Split / Not mine actions for the oldest one. Updates after each answer, shows "[merchant] marked [answer] · Undo" until the next tap; removed only when count = 0; re-posted after reboot or if cleared by the system. New payments after review time add to the count. Actions from a locked phone require unlock (setAuthenticationRequired); amounts hidden when Hide amounts is on |
 | Month roll-over | On the 1st, creates pending BillPeriod rows for every active Bill and pre-computes last month's totals |
 | Budget check | After each answer: 80% / 100% category alert (if enabled) |
-| Auto backup | Weekly while charging, encrypted file on device |
+| Auto backup | Nightly while charging: .etb to the user-picked folder, keep 7; also before every app upgrade (§7) |
 | Capture watchdog | Detects revoked SMS/notification access; posts "Capture stopped"; on fix re-scans inbox since last captured SMS |
 
 ---
 
 ## 3. Data model (Room, all amounts in paise)
+
+Every table also has `uid` (UUID string, unique), `created_at` and `updated_at`. These are used for backup merge (§7); not repeated below.
 
 | Table | Fields |
 |---|---|
@@ -231,7 +234,7 @@ SMS + notification for one payment → merge (amount, 5 min, ref no.) · same am
 6. **Rent & bills:** Bill + BillPeriod, pay and collect, flatmate splits, pay-through-flatmate, tenant ledger, rent change, end tenancy, auto-match, setup step 6.2, HRA/rental tax exports. *Done when* a month of rent paid and collected marks itself without manual taps.
 7. **Location:** GPS logger, saved places, offline POIs, place on every card.
 8. **Optional AI:** model download, Ask bar, typed/spoken add, unreadable SMS parsing. *Done when* answers equal DB totals and nothing breaks without the model.
-9. **Hardening:** encrypted backup/restore, permission health, widget, lock-screen rules, battery and memory profiling, edge-case tests from §4.7.
+9. **Hardening:** encrypted .etb backup, share, import and merge (§7), pre-upgrade backup, migration tests, permission health, widget, lock-screen rules, battery and memory profiling, edge-case tests from §4.7.
 
 ### 5.2 Accessibility & usability rules (WCAG 2.2 AA, Android)
 - Every tap target ≥ 48 dp; text ≥ 12 sp; supports 200% font scale (no fixed row heights).
@@ -286,3 +289,49 @@ Rules first, AI only as a fallback, **never a silent guess**: anything uncertain
 - Build a test corpus from the user's own bank SMS (names and numbers masked) for every bank and app used; add every message the engine got wrong.
 - Each release must get **direction and amount 100% right** on the corpus; anything unsure lands in "Couldn't read" or 1.7, never guessed.
 - Templates and keyword lists live in a versioned rules file: a new bank format = a data change plus a test, not new code.
+
+---
+
+## 7. Backup, import, export, moving phone (screens 6.4, 6.5, 6.6)
+
+Three situations: **(a)** updating the app: data must survive with no action; **(b)** reinstall or new phone; **(c)** sending the data to another phone, e.g. on WhatsApp. (b) and (c) use the same file.
+
+### 7.1 The backup file (`.etb`)
+| Part | Rule |
+|---|---|
+| Name | `ExpenseTracker-23Oct2026.etb` (the date is when it was made) |
+| Container | A ZIP file holding `manifest.json` (not encrypted) + `payload.bin` (encrypted) |
+| manifest.json | `format:"etb"`, `formatVersion:1`, appVersionName, appVersionCode, dbSchemaVersion, createdAt (ISO-8601 with zone), deviceModel, counts per table, `kdf:{alg:"PBKDF2WithHmacSHA256", iterations:600000, salt}`, `cipher:{alg:"AES-256-GCM", nonce}`, payloadSha256. No amounts, names or other personal data. |
+| payload.bin | AES-256-GCM over an inner ZIP: `data/<table>.jsonl` (one JSON row per line, every table in §3, including raw SmsMessage text and learned rules), `receipts/` (photos), `settings.json` |
+| Key | Built from the **backup password** with PBKDF2 (javax.crypto, no extra library). The password is never stored. For nightly auto-backups, the derived key is stored wrapped by an Android Keystore key. |
+| Why not copy the DB file | The SQLCipher key lives in the Android Keystore, which is wiped on uninstall or a new phone. JSON rows tagged with a schema version also let a newer app import an older backup and merge rows. |
+| IDs | Every row has a UUID string `uid` (alongside the Room Long id) so that merges and dedupes are exact across phones. Foreign keys are exported as uid. |
+| Left out | AI model, offline map tiles (downloaded again), app-lock PIN, permissions, the location log older than 7 days |
+| Size | About 2–5 MB for 2 years; receipts compressed to JPEG 1600 px. WhatsApp accepts documents up to 2 GB. |
+
+### 7.2 Sharing (WhatsApp and others) — 6.5
+"Make file & share…" → password sheet → file written to app cache → `ACTION_SEND` via FileProvider, MIME `application/octet-stream`, `EXTRA_STREAM`, read-URI grant. WhatsApp sends it as a Document (never as media, so it is not recompressed). Also offered: Save to Downloads (MediaStore), Drive, Gmail, Nearby Share.
+
+### 7.3 Import — 6.6
+Ways in: (1) Welcome O0 › "I have a backup file"; (2) Settings › Backup › Import; (3) tapping the file in WhatsApp or Files → "Open with Expense Tracker". The activity declares intent-filters for `ACTION_VIEW` and `ACTION_SEND` with `application/octet-stream`, `application/zip` and `*/*` plus the path pattern `.*\.etb`. (1) and (2) use the system picker (`ACTION_OPEN_DOCUMENT`, any type).
+
+Steps: read the manifest (show the date, counts and app version **before** asking for the password) → password → check the SHA-256 and GCM tag → open. A wrong password and a damaged file give different messages. After 5 wrong attempts, wait 60 s.
+
+| Mode | Behaviour |
+|---|---|
+| Replace everything | Default on a fresh install. Current data is first saved as an automatic backup, kept 7 days ("Undo restore"). |
+| Add to what's here | Same uid → keep the newer `updatedAt`. Different uid but same SMS (sender + body hash) or same transaction (amount + account + time ±5 min + ref) → keep one. People merged by uid, then by UPI ID. |
+| Version rules | Backup schema older than the app → run the importer upgrade steps (one per schema version, tested). Newer than the app → refuse: "Update the app first". |
+| After restore | Ask again only for SMS and notification access (O1), then go straight to Today, skipping O2–O4 and the rent step because those settings came from the backup. Re-scan the inbox from the newest SMS in the backup, so messages that arrived during the move are caught. |
+
+### 7.4 Updating the app (no user action)
+- Same package name and the **same signing keystore** for every release (keep the keystore safe; without it you can't update, only reinstall and restore). versionCode always goes up. Install the new APK over the old one and never uninstall first.
+- Room migrations for every schema change, each with a test. **Never** use `fallbackToDestructiveMigration`.
+- On the first launch after versionCode changes: write an automatic `.etb` **before** running migrations. If a migration fails, show "Restore yesterday's backup", never an empty app.
+- Manifest: `android:allowBackup="false"` and `dataExtractionRules` that exclude everything. Google cloud or phone-to-phone copies would arrive without the Keystore key and could not be read.
+
+### 7.5 Automatic backup
+WorkManager job each night while charging and idle. It writes `.etb` to a folder the user picks once (`ACTION_OPEN_DOCUMENT_TREE` with a persisted URI permission; suggested: Documents/ExpenseTracker). That folder survives uninstall. Keep the last 7. If no folder is picked, the app reminds once in Settings, never with a notification.
+
+### 7.6 Readable export (not importable)
+Excel `.xlsx` with sheets Payments, Received, Splits, People balances, Bills & rent, Months (in / out / saved); CSV (one file per sheet, zipped); PDF month or year statement; HRA rent receipts and rental income (§4.3). Range: month, year, financial year, all. Not encrypted, and labelled so on screen.

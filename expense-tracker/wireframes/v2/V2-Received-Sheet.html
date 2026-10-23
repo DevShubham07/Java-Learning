@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Money received sheet</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #6E7781; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <a href="V2-Today.html" aria-label="Close" style="height: 64px; flex-shrink: 0"></a>
+  <div role="dialog" aria-label="₹500 received from Rohit" style="flex-grow: 1; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 10px 16px 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #8C959F"></div>
+    <div style="display: flex; align-items: flex-start; gap: 8px">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px">
+        <span style="font-size: 13px; color: #424A53">Money received</span>
+        <span style="font-size: 28px; font-weight: 700">+₹500</span>
+        <span style="font-size: 13px; color: #424A53">From Rohit (their UPI ID) · 8:05 pm · into HDFC ••1102</span>
+      </div>
+      <a href="V2-Today.html" aria-label="Close" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </a>
+    </div>
+
+    <span style="font-size: 16px; font-weight: 600">What is this money?</span>
+    <fieldset style="border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+      <legend style="position: absolute; width: 1px; height: 1px; overflow: hidden">What is this money</legend>
+      <label style="min-height: 64px; border-radius: 14px; border: 2px solid #1F2328; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rx" checked style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Paying me back <span style="font-size: 12px; font-weight: 600; background: #EAEEF2; border-radius: 4px; padding: 1px 6px">suggested</span></strong><span style="font-size: 13px; color: #424A53">Rohit owed ₹800 (rent share) → ₹300 left. Not income.</span></span></label>
+      <label style="min-height: 56px; border-radius: 14px; border: 1px solid #8C959F; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rx" style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Rent I collect</strong><span style="font-size: 13px; color: #424A53">Pick tenant and month · counts as income</span></span></label>
+      <label style="min-height: 56px; border-radius: 14px; border: 1px solid #8C959F; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rx" style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Income</strong><span style="font-size: 13px; color: #424A53">Salary, freelance, gift, other · counts as income</span></span></label>
+      <label style="min-height: 56px; border-radius: 14px; border: 1px solid #8C959F; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rx" style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Lending me</strong><span style="font-size: 13px; color: #424A53">You'll owe Rohit ₹500</span></span></label>
+      <label style="min-height: 56px; border-radius: 14px; border: 1px solid #8C959F; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rx" style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">For something I'll pay for them</strong><span style="font-size: 13px; color: #424A53">Held for Rohit until you spend it</span></span></label>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" style="flex-grow: 1; min-height: 44px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">Refund</button>
+        <a href="V2-Reimburse.html" style="flex-grow: 1; min-height: 44px; border-radius: 22px; border: 1px solid #8C959F; box-sizing: border-box; font-size: 13px; color: #1F2328; display: flex; align-items: center; justify-content: center; text-decoration: none; padding: 0 12px">Office paid me back</a>
+        <button type="button" style="flex-grow: 1; min-height: 44px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">From my account</button>
+        <button type="button" style="flex-grow: 1; min-height: 44px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">Ignore</button>
+      </div>
+    </fieldset>
+
+    <div style="flex-grow: 1"></div>
+    <span style="font-size: 12px; color: #424A53; line-height: 1.4">If they send more than they owe, the extra is asked separately (advance, income or lending). "Always for Rohit" remembers the choice.</span>
+    <a href="V2-Today.html" style="min-height: 52px; border-radius: 26px; background: #0B57D0; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Save · Rohit now owes ₹300</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

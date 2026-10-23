@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Import past SMS</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; padding: 32px 24px 24px; gap: 20px; overflow: hidden">
+  <div style="display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; gap: 6px">
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+      <div style="flex-grow: 1; height: 4px; border-radius: 2px; background: #0B57D0"></div>
+    </div>
+    <div style="font-size: 13px; color: #57606A">Step 5 of 5</div>
+    <h1 style="margin: 0; font-size: 24px; font-weight: 600">Bring in past payments?</h1>
+    <p style="margin: 0; font-size: 14px; color: #424A53; line-height: 1.5">Reads bank SMS already on this phone. Gives you history and finds your accounts on day one.</p>
+  </div>
+
+  <fieldset style="border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+    <legend style="position: absolute; width: 1px; height: 1px; overflow: hidden">Import range</legend>
+    <label style="height: 56px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 14px; display: flex; align-items: center; gap: 12px; font-size: 15px"><input type="radio" name="range" style="width: 20px; height: 20px">Last 30 days</label>
+    <label style="height: 56px; border-radius: 12px; border: 2px solid #1F2328; padding: 0 14px; display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 500"><input type="radio" name="range" checked style="width: 20px; height: 20px"><span style="flex-grow: 1">Last 90 days</span><span style="font-size: 12px; color: #57606A; font-weight: 400">better budgets</span></label>
+    <label style="height: 56px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 14px; display: flex; align-items: center; gap: 12px; font-size: 15px"><input type="radio" name="range" style="width: 20px; height: 20px">Start fresh from today</label>
+  </fieldset>
+
+  <div style="background: #F6F8FA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; justify-content: space-between; font-size: 14px"><strong>Scanning inbox…</strong><span style="color: #57606A">62%</span></div>
+    <div style="height: 6px; border-radius: 3px; background: #D0D7DE; display: flex"><div style="width: 62%; border-radius: 3px; background: #0B57D0"></div></div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; text-align: center">
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 600">[N]</span><span style="font-size: 12px; color: #57606A">transactions</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 600">[N]</span><span style="font-size: 12px; color: #57606A">accounts &amp; cards</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 600">[N]</span><span style="font-size: 12px; color: #57606A">couldn't read</span></div>
+    </div>
+    <div style="font-size: 12px; color: #424A53; line-height: 1.4">Unreadable SMS go to the Unparsed list. Past items are saved as history, so they won't land in tonight's review.</div>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+  <a href="../v2/V2-Today.html" style="height: 52px; border-radius: 26px; background: #1F2328; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Go to Home</a>
+  <div style="font-size: 12px; color: #57606A; text-align: center">Import keeps running if you leave this screen.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

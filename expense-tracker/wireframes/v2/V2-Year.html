@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Year view</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 16px 16px 8px; display: flex; align-items: center; gap: 4px">
+    <a href="V2-Month.html" aria-label="Back to month" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <h1 style="margin: 0; flex-grow: 1; font-size: 22px; font-weight: 600">2026 so far</h1>
+    <button type="button" style="min-height: 44px; padding: 0 12px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">Export</button>
+  </div>
+
+  <div style="flex-grow: 1; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden">
+    <div role="tablist" aria-label="Trend by" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #EAEEF2; border-radius: 12px; padding: 4px; gap: 4px">
+      <button type="button" role="tab" aria-selected="false" style="min-height: 40px; border-radius: 9px; border: none; background: transparent; font: inherit; font-size: 14px; color: #424A53">Days</button>
+      <button type="button" role="tab" aria-selected="false" style="min-height: 40px; border-radius: 9px; border: none; background: transparent; font: inherit; font-size: 14px; color: #424A53">Weeks</button>
+      <button type="button" role="tab" aria-selected="true" style="min-height: 40px; border-radius: 9px; border: none; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328">Months</button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="border: 1px solid #D0D7DE; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #57606A">In</span><strong style="font-size: 17px">₹[x]</strong></div>
+      <div style="border: 1px solid #D0D7DE; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #57606A">Out</span><strong style="font-size: 17px">₹[x]</strong></div>
+      <div style="border: 2px solid #1F2328; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #57606A">Saved</span><strong style="font-size: 17px">₹[x]</strong></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div role="img" aria-label="Chart: money in and money out per month, January to October. Best month March, highest spend August." style="height: 170px; border: 1px dashed #8C959F; border-radius: 12px; padding: 10px; box-sizing: border-box; display: flex; align-items: flex-end; gap: 6px">
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 70%; background: #8C959F"></div><div style="flex-grow: 1; height: 50%; background: #1F2328"></div></div>
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 70%; background: #8C959F"></div><div style="flex-grow: 1; height: 55%; background: #1F2328"></div></div>
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 80%; background: #8C959F"></div><div style="flex-grow: 1; height: 40%; background: #1F2328"></div></div>
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 70%; background: #8C959F"></div><div style="flex-grow: 1; height: 60%; background: #1F2328"></div></div>
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 72%; background: #8C959F"></div><div style="flex-grow: 1; height: 75%; background: #1F2328"></div></div>
+        <div style="flex-grow: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%"><div style="flex-grow: 1; height: 72%; background: #8C959F"></div><div style="flex-grow: 1; height: 52%; background: #1F2328"></div></div>
+      </div>
+      <span style="font-size: 12px; color: #424A53">[chart: grey = money in, black = money out, one pair per month]</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 4px; padding: 6px 0; font-size: 12px; font-weight: 600; color: #57606A"><span>Month</span><span style="text-align: right">In</span><span style="text-align: right">Out</span><span style="text-align: right">Saved</span></div>
+      <a href="V2-Month.html" style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 4px; min-height: 48px; align-items: center; border-top: 1px solid #EAEEF2; font-size: 14px; color: #1F2328; text-decoration: none"><strong>Oct</strong><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span><strong style="text-align: right">₹[x]</strong></a>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 4px; min-height: 48px; align-items: center; border-top: 1px solid #EAEEF2; font-size: 14px"><span>Sep</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span></div>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 4px; min-height: 48px; align-items: center; border-top: 1px solid #EAEEF2; font-size: 14px"><span>Aug</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span></div>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 4px; min-height: 48px; align-items: center; border-top: 1px solid #EAEEF2; font-size: 14px"><span>Jul</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span><span style="text-align: right">₹[x]</span></div>
+    </div>
+    <span style="font-size: 12px; color: #424A53">Export: CSV statement of any month or the whole year.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

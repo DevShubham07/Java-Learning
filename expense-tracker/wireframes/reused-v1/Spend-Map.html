@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spending map</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #EAEEF2; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden; position: relative">
+  <div style="position: absolute; left: 0; top: 0; width: 390px; height: 520px; background: repeating-linear-gradient(0deg, transparent 0 59px, #D0D7DE 59px 60px), repeating-linear-gradient(90deg, transparent 0 59px, #D0D7DE 59px 60px)" aria-hidden="true"></div>
+  <div style="position: absolute; left: 70px; top: 190px; width: 110px; height: 110px; border-radius: 55px; background: rgba(31,35,40,0.25); border: 2px solid #1F2328; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">Cyber Hub</div>
+  <div style="position: absolute; left: 220px; top: 260px; width: 72px; height: 72px; border-radius: 36px; background: rgba(31,35,40,0.18); border: 2px solid #1F2328; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700">DLF Ph 3</div>
+  <div style="position: absolute; left: 250px; top: 140px; width: 46px; height: 46px; border-radius: 23px; background: rgba(31,35,40,0.12); border: 2px solid #1F2328; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700">Home</div>
+  <div style="position: absolute; left: 120px; top: 380px; width: 36px; height: 36px; border-radius: 18px; background: rgba(31,35,40,0.12); border: 2px solid #1F2328"></div>
+
+  <div style="position: relative; padding: 20px 16px 8px; display: flex; align-items: center; gap: 8px">
+    <a href="../v2/V2-Month-Spend.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <button type="button" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">October ▾</button>
+    <button type="button" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">All categories ▾</button>
+  </div>
+  <div style="position: relative; margin: 4px 16px 0; align-self: flex-start; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #424A53; background: #FFFFFF; border-radius: 4px; padding: 2px 6px">offline OSM tiles · bubble size = my share</div>
+
+  <div style="flex-grow: 1"></div>
+  <div style="position: relative; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 12px 16px 24px; display: flex; flex-direction: column; gap: 4px; height: 330px; box-sizing: border-box">
+    <div style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #D0D7DE; margin-bottom: 8px"></div>
+    <span style="font-size: 15px; font-weight: 600; padding-bottom: 4px">Top places</span>
+    <a href="../v2/V2-Money.html" style="display: flex; align-items: center; height: 52px; border-bottom: 1px solid #EAEEF2; color: #1F2328; text-decoration: none; gap: 8px"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Cyber Hub, Gurugram</span><span style="font-size: 12px; color: #57606A">[N] payments · mostly Food</span></span><strong>₹[x]</strong></a>
+    <div style="display: flex; align-items: center; height: 52px; border-bottom: 1px solid #EAEEF2; gap: 8px"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">DLF Phase 3</span><span style="font-size: 12px; color: #57606A">[N] payments · Groceries</span></span><strong>₹[x]</strong></div>
+    <div style="display: flex; align-items: center; height: 52px; border-bottom: 1px solid #EAEEF2; gap: 8px"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Home</span><span style="font-size: 12px; color: #57606A">[N] payments · Bills</span></span><strong>₹[x]</strong></div>
+    <div style="display: flex; align-items: center; height: 44px; gap: 8px; font-size: 13px; color: #57606A">[N] payments have no place</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

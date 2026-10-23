@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Permission health</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #D0D7DE">
+    <a href="../v2/V2-Settings.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 17px; font-weight: 600">Permission health</span>
+      <span style="font-size: 12px; color: #57606A">Checked just now</span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; padding: 8px 16px 16px; display: flex; flex-direction: column">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A3A06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 3l9.5 17h-19z"></path><path d="M12 10v4"></path><path d="M12 17.5v.5"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Read SMS</strong><span style="font-size: 13px; color: #7A3A06">Turned off at 4:10 pm · capture paused</span></span>
+      <button type="button" style="height: 40px; padding: 0 16px; border-radius: 20px; border: none; background: #7A3A06; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Fix</button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A7F37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Notification access</strong><span style="font-size: 13px; color: #57606A">Last payment caught 8:42 pm</span></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A7F37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Location, all the time</strong><span style="font-size: 13px; color: #57606A">Last fix 14 min ago</span></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A7F37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Notifications</strong><span style="font-size: 13px; color: #57606A">Allowed</span></span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #EAEEF2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A7F37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Battery optimisation off</strong><span style="font-size: 13px; color: #57606A">Background jobs ran on time today</span></span>
+    </div>
+
+    <div style="margin-top: 16px; background: #F6F8FA; border-radius: 12px; padding: 12px; font-size: 13px; color: #424A53; line-height: 1.5">After a fix, the app re-scans the SMS inbox from the last captured message, so nothing is lost.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lock screen notification</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #24292F; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #FFFFFF; display: flex; flex-direction: column; padding: 72px 16px 24px; gap: 16px; overflow: hidden">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding-bottom: 16px">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+    <div style="font-size: 72px; font-weight: 300; line-height: 1">9:30</div>
+    <div style="font-size: 16px; color: #D0D7DE">Thursday, 23 October · phone locked</div>
+  </div>
+
+  <div style="background: #FFFFFF; color: #1F2328; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #424A53">
+      <div style="width: 20px; height: 20px; border-radius: 6px; background: #1F2328; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">₹</div>
+      <span style="flex-grow: 1">Expense Tracker · pinned</span>
+    </div>
+    <div style="font-size: 18px; font-weight: 600">7 payments need an answer</div>
+    <div aria-label="Amounts hidden" style="font-size: 14px; color: #424A53">Amounts hidden on lock screen</div>
+    <div style="background: #F6F8FA; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; font-size: 15px"><strong>Uber · ₹ • • •</strong><span style="color: #57606A; font-size: 13px">1 of 7</span></div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+        <button type="button" style="min-height: 48px; border-radius: 24px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328; display: flex; align-items: center; justify-content: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Mine</button>
+        <button type="button" style="min-height: 48px; border-radius: 24px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328; display: flex; align-items: center; justify-content: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Split</button>
+        <button type="button" style="min-height: 48px; border-radius: 24px; border: 2px solid #1F2328; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328; display: flex; align-items: center; justify-content: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Not mine</button>
+      </div>
+      <span style="font-size: 12px; color: #424A53">Tapping any answer asks for fingerprint first.</span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+  <a href="V2-Today.html" style="min-height: 48px; border-radius: 24px; border: 2px solid #FFFFFF; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Unlock to answer · opens Today</a>
+  <div style="font-size: 13px; color: #D0D7DE; line-height: 1.5; padding: 0 4px">With "Hide amounts" on, the lock screen never shows money. Answers from a locked phone need the phone unlocked first, so nobody else can mark your payments.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

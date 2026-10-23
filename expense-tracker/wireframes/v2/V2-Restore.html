@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Restore a backup</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 12px 16px 8px 4px; display: flex; align-items: center; gap: 4px; border-bottom: 1px solid #D0D7DE">
+    <a href="../reused-v1/Onb-Welcome.html" aria-label="Back" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+    <h1 style="margin: 0; font-size: 20px; font-weight: 600">Restore a backup</h1>
+  </div>
+  <div style="flex-grow: 1; padding: 14px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+    <div style="border: 1px solid #D0D7DE; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: center">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+      <span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">ExpenseTracker-23Oct2026.etb</strong><span style="font-size: 13px; color: #424A53">From WhatsApp · 2.4 MB</span></span>
+      <button type="button" style="min-height: 44px; padding: 0 12px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; color: #1F2328">Change</button>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Backup password
+      <input type="password" value="••••••••••" style="min-height: 52px; border-radius: 12px; border: 2px solid #1F2328; padding: 0 14px; font: inherit; font-size: 16px"></label>
+
+    <div style="background: #F6F8FA; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 4px; font-size: 13px">
+      <strong style="font-size: 14px">Unlocked · made 23 Oct 2026, 9:41 pm</strong>
+      <span>1,284 payments · 14 people · 6 bills &amp; rent · Oct 2024 to Oct 2026</span>
+      <span style="color: #424A53">Made on app version 1.4 · this phone has 1.5 (it will be upgraded)</span>
+    </div>
+
+    <fieldset style="border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 15px; font-weight: 600; padding: 0 0 6px">How to restore</legend>
+      <label style="min-height: 64px; border-radius: 14px; border: 2px solid #1F2328; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rm" checked style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Replace everything</strong><span style="font-size: 13px; color: #424A53">For a new phone or fresh install. Nothing here yet.</span></span></label>
+      <label style="min-height: 64px; border-radius: 14px; border: 1px solid #8C959F; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; gap: 12px"><input type="radio" name="rm" style="width: 22px; height: 22px; margin: 0">
+        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px">Add to what's here</strong><span style="font-size: 13px; color: #424A53">Same payments are kept once, never doubled.</span></span></label>
+    </fieldset>
+    <div style="flex-grow: 1"></div>
+    <span style="font-size: 12px; color: #424A53; line-height: 1.45">Wrong password 5 times: wait 1 minute. Replacing keeps a copy of this phone's data for 7 days (Settings › Backup › Undo restore). After restoring, you only turn on SMS and notification access again.</span>
+    <a href="../reused-v1/Onb-Permissions.html" style="min-height: 48px; border-radius: 24px; border: none; background: #0B57D0; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Restore · then allow SMS access</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

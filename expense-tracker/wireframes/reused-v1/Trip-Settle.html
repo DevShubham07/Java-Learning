@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Trip settle-up</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #D0D7DE">
+    <a href="../v2/V2-Trip.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 17px; font-weight: 600">Settle Goa trip</span>
+      <span style="font-size: 12px; color: #57606A">3 transfers clear everything</span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; padding: 16px; display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="border: 1px solid #D0D7DE; border-radius: 14px; padding: 14px; display: flex; align-items: center; gap: 10px">
+        <span style="flex-grow: 1; font-size: 15px"><strong>You</strong> → <strong>Rahul</strong></span>
+        <span style="font-size: 17px; font-weight: 700">₹[x]</span>
+        <button type="button" style="height: 40px; padding: 0 12px; border-radius: 20px; border: none; background: #0B57D0; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600">Pay by UPI</button>
+      </div>
+      <div style="border: 1px solid #D0D7DE; border-radius: 14px; padding: 14px; display: flex; align-items: center; gap: 10px">
+        <span style="flex-grow: 1; font-size: 15px"><strong>Aman</strong> → <strong>You</strong></span>
+        <span style="font-size: 17px; font-weight: 700">₹[x]</span>
+        <button type="button" style="height: 40px; padding: 0 12px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">WhatsApp</button>
+      </div>
+      <div style="border: 1px solid #D0D7DE; border-radius: 14px; padding: 14px; display: flex; align-items: center; gap: 10px">
+        <span style="flex-grow: 1; font-size: 15px"><strong>Priya</strong> → <strong>Rahul</strong></span>
+        <span style="font-size: 17px; font-weight: 700">₹[x]</span>
+        <button type="button" style="height: 40px; padding: 0 12px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">Share</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0">
+      <div style="padding-bottom: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606A; letter-spacing: 0.06em">WHY · NET PER PERSON</div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>Rahul</span><span>paid ₹[x] · share ₹[x] · <strong>gets ₹[x]</strong></span></div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>You</span><span>paid ₹[x] · share ₹[x] · <strong>owes ₹[x]</strong></span></div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>Aman</span><span>paid ₹[x] · share ₹[x] · <strong>owes ₹[x]</strong></span></div>
+      <div style="display: flex; justify-content: space-between; height: 44px; align-items: center; font-size: 14px"><span>Priya</span><span>paid ₹0 · share ₹[x] · <strong>owes ₹[x]</strong></span></div>
+    </div>
+    <div style="font-size: 12px; color: #57606A; line-height: 1.4">Transfers between two other people are only for sharing the plan; they don't change your balances.</div>
+  </div>
+
+  <div style="border-top: 1px solid #D0D7DE; padding: 12px 16px 24px">
+    <a href="../v2/V2-People.html" style="height: 52px; border-radius: 26px; background: #1F2328; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Close trip</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

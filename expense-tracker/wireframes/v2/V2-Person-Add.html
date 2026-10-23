@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Add a person</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #6E7781; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <a href="V2-People-Manage.html" aria-label="Close" style="height: 120px; flex-shrink: 0"></a>
+  <div role="dialog" aria-label="Add a person" style="flex-grow: 1; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 10px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+    <div style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #8C959F"></div>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <span style="flex-grow: 1; font-size: 20px; font-weight: 600">Add a person</span>
+      <a href="V2-People-Manage.html" aria-label="Close" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </a>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name <span style="font-weight: 400; font-size: 12px; color: #424A53">Required</span>
+      <input type="text" value="Neha" style="min-height: 48px; border-radius: 12px; border: 2px solid #1F2328; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box">
+    </label>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <span style="font-size: 14px; font-weight: 600">Who are they to you?</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Friend</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Flatmate</button>
+        <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: none; background: #1F2328; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Tenant</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Landlord</button>
+        <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Family</button>
+      </div>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">UPI ID <span style="font-weight: 400; font-size: 12px; color: #424A53">Optional · lets the app match their payments automatically</span>
+      <input type="text" placeholder="e.g. neha@okhdfcbank" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box">
+    </label>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone <span style="font-weight: 400; font-size: 12px; color: #424A53">Optional · for WhatsApp reminders. Typed by you; contacts are never read.</span>
+      <input type="tel" placeholder="+91" style="min-height: 48px; border-radius: 12px; border: 1px solid #8C959F; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 400; color: #1F2328; box-sizing: border-box">
+    </label>
+    <span style="font-size: 12px; color: #424A53">Tenant chosen: next you'll set up their rent (Rent I collect).</span>
+    <div style="flex-grow: 1"></div>
+    <a href="V2-Bill-Add.html" style="min-height: 52px; border-radius: 26px; background: #0B57D0; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Save &amp; set up rent</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

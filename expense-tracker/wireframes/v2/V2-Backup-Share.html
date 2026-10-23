@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lock and share backup</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: rgba(31,35,40,0.55); font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <a href="V2-Backup.html" aria-label="Close" style="height: 140px; flex-shrink: 0"></a>
+  <div role="dialog" aria-label="Lock and share backup file" style="flex-grow: 1; background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 10px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+    <div style="width: 36px; height: 4px; border-radius: 2px; background: #8C959F; align-self: center"></div>
+    <div style="display: flex; align-items: center; justify-content: space-between">
+      <h2 style="margin: 0; font-size: 20px; font-weight: 600">Lock the file</h2>
+      <a href="V2-Backup.html" aria-label="Close" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></a>
+    </div>
+    <span style="font-size: 14px; color: #424A53; line-height: 1.45">Anyone who gets this file needs the password to open it. WhatsApp and Drive only see locked data.</span>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Backup password
+      <input type="password" value="••••••••••" aria-describedby="pw-help" style="min-height: 52px; border-radius: 12px; border: 2px solid #1F2328; padding: 0 14px; font: inherit; font-size: 16px"></label>
+    <span id="pw-help" style="font-size: 13px; color: #424A53">At least 8 characters. Strong <span aria-hidden="true">■■■■</span>. Not saved anywhere you can recover it, so write it down.</span>
+    <label style="display: flex; gap: 12px; align-items: center; min-height: 48px; font-size: 15px"><input type="checkbox" checked style="width: 22px; height: 22px; margin: 0">Use the same password for nightly backups</label>
+    <div style="background: #F6F8FA; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 4px; font-size: 13px">
+      <strong style="font-size: 14px">In the file</strong>
+      <span>1,284 payments · 14 people · 2 trips · 6 bills &amp; rent · 4 accounts · rules &amp; places · receipts</span>
+      <span style="color: #424A53">Not in the file: AI model and map (download again), app lock.</span>
+      <span style="color: #424A53">About 2.4 MB. WhatsApp allows up to 2 GB.</span>
+    </div>
+    <div style="flex-grow: 1"></div>
+    <button type="button" style="min-height: 48px; border-radius: 24px; border: none; background: #0B57D0; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600">Lock &amp; open share sheet</button>
+    <span style="font-size: 12px; color: #424A53; text-align: center">Share sheet: WhatsApp · Drive · Gmail · Nearby Share · Save to Downloads</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

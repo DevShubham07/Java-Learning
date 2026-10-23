@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pinned nightly notification</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #E9ECEF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; padding: 72px 16px 24px; gap: 16px; overflow: hidden">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding-bottom: 16px">
+    <div style="font-size: 72px; font-weight: 300; line-height: 1">9:30</div>
+    <div style="font-size: 16px; color: #424A53">Thursday, 23 October</div>
+  </div>
+
+  <div style="background: #FFFFFF; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #1F2328">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #424A53">
+      <div style="width: 20px; height: 20px; border-radius: 6px; background: #1F2328; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">₹</div>
+      <span style="flex-grow: 1">Expense Tracker</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#424A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6l-1 6 4 3v2H6v-2l4-3z"></path><path d="M12 15v6"></path></svg>
+      <span>Pinned</span>
+    </div>
+    <div style="font-size: 18px; font-weight: 600">7 payments need an answer</div>
+    <div style="font-size: 14px; color: #424A53">₹2,340 today · stays here until all 7 are answered</div>
+    <div style="font-size: 13px; color: #424A53; border: 1px dashed #8C959F; border-radius: 8px; padding: 6px 8px">Mostly food around Cyber Hub; 2 look like splits with Rahul and Aman. <span style="font-size: 12px; color: #57606A">(AI line, only when the model is installed)</span></div>
+
+    <div style="background: #F6F8FA; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; font-size: 15px"><strong>Uber · ₹312</strong><span style="color: #57606A; font-size: 13px">1 of 7 · 6:10 pm</span></div>
+      <div style="font-size: 14px; font-weight: 600">Paid by you?</div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+        <button type="button" style="min-height: 48px; border-radius: 24px; border: none; background: #0B57D0; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600">Mine</button>
+        <a href="V2-Split-Sheet.html" style="min-height: 48px; border-radius: 24px; border: 2px solid #1F2328; box-sizing: border-box; color: #1F2328; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Split</a>
+        <a href="V2-Not-Mine.html" style="min-height: 48px; border-radius: 24px; border: 2px solid #1F2328; box-sizing: border-box; color: #1F2328; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; text-decoration: none">Not mine</a>
+      </div>
+    </div>
+    <a href="V2-Today.html" style="min-height: 48px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; text-decoration: none">Open all 7</a>
+  </div>
+
+  <div style="font-size: 13px; color: #424A53; line-height: 1.5; padding: 0 4px">Answer straight from the notification: each tap moves to the next payment and shows "Uber marked Mine · Undo" until the next tap. Swiping it away does nothing until the count reaches 0.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI model and map data</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 16px 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #D0D7DE">
+    <a href="../v2/V2-Settings.html" aria-label="Back" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 17px; font-weight: 600">AI model &amp; map data</span>
+      <span style="font-size: 12px; color: #57606A">One-way downloads · your data never uploads</span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+    <div style="border: 1px solid #D0D7DE; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><strong style="font-size: 16px">Assistant model</strong><span style="font-size: 12px; color: #57606A">Gemma 4 E2B</span></div>
+      <div style="display: flex; justify-content: space-between; font-size: 13px"><span>Downloading… 1.1 of 2.4 GB</span><span style="color: #57606A">Wi-Fi only</span></div>
+      <div style="height: 8px; border-radius: 4px; background: #EAEEF2; display: flex"><div style="width: 46%; border-radius: 4px; background: #0B57D0"></div></div>
+      <div style="display: flex; gap: 8px">
+        <button type="button" style="height: 40px; padding: 0 16px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328">Pause</button>
+        <button type="button" style="height: 40px; padding: 0 16px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Cancel</button>
+      </div>
+      <span style="font-size: 12px; color: #57606A">When installed: shows size on disk and a Delete button. Loaded only while you use it.</span>
+    </div>
+
+    <div style="border: 1px solid #D0D7DE; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><strong style="font-size: 16px">Offline map &amp; places</strong><span style="font-size: 12px; color: #57606A">OpenStreetMap</span></div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #EAEEF2">
+        <div style="display: flex; justify-content: space-between; height: 40px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span style="color: #57606A">Region</span><span>Delhi NCR</span></div>
+        <div style="display: flex; justify-content: space-between; height: 40px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span style="color: #57606A">Size</span><span>[x] MB</span></div>
+        <div style="display: flex; justify-content: space-between; height: 40px; align-items: center; font-size: 14px"><span style="color: #57606A">Updated</span><span>[date]</span></div>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <button type="button" style="height: 40px; padding: 0 16px; border-radius: 20px; border: none; background: #1F2328; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">Check for update</button>
+        <button type="button" style="height: 40px; padding: 0 16px; border-radius: 20px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; color: #1F2328">Delete</button>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: #57606A; padding: 0 4px"><span>App data (encrypted database)</span><span>[x] MB</span></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0B57D0","options":["#0B57D0","#1F2328","#B4530A"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#0B57D0' };
+  }
+}
+</script>
+</body>
+</html>

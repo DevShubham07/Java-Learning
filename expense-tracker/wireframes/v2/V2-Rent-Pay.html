@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rent I pay</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B57D0}a:hover{color:#08408F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1F2328; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 16px 16px 8px; display: flex; align-items: center; gap: 4px">
+    <a href="V2-Bills.html" aria-label="Back to rent and bills" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F2328" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </a>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px">
+      <h1 style="margin: 0; font-size: 20px; font-weight: 600">Rent · Flat 4C</h1>
+      <span style="font-size: 13px; color: #424A53">I pay · due on the 5th</span>
+    </div>
+    <a href="V2-Bill-Add.html" style="min-height: 44px; padding: 0 12px; display: flex; align-items: center; font-size: 14px; font-weight: 600; text-decoration: none">Edit</a>
+  </div>
+
+  <div style="flex-grow: 1; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+    <div style="border: 2px solid #1F2328; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 14px">October rent</span><strong style="font-size: 24px">₹[rent]</strong></div>
+      <span style="font-size: 14px; font-weight: 600">✓ Paid 1 Oct from HDFC ••1102</span>
+      <span style="font-size: 12px; color: #424A53">Matched: payment to landlord's UPI ID [landlord]@okicici</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 600; padding-bottom: 4px">Split with flatmates · same every month</span>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 56px; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; font-size: 15px">You</span><strong style="font-size: 15px">₹[x]</strong></div>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 56px; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Rohit</span><span style="font-size: 12px; color: #424A53">✓ Paid you 2 Oct</span></span><strong style="font-size: 15px">₹[x]</strong></div>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 56px; border-bottom: 1px solid #EAEEF2"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px">Sana</span><span style="font-size: 12px; color: #7A3A06; font-weight: 600">Owes you ₹[x]</span></span>
+        <button type="button" style="min-height: 44px; padding: 0 12px; border-radius: 22px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1F2328">WhatsApp</button></div>
+    </div>
+
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 600; padding-bottom: 4px">History</span>
+      <div style="display: flex; justify-content: space-between; min-height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>September</span><span>✓ Paid 3 Sep</span></div>
+      <div style="display: flex; justify-content: space-between; min-height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>August</span><span>✓ Paid 7 Aug · 2 days late</span></div>
+      <div style="display: flex; justify-content: space-between; min-height: 44px; align-items: center; border-bottom: 1px solid #EAEEF2; font-size: 14px"><span>Deposit given</span><span>₹[deposit] · Mar 2026</span></div>
+      <button type="button" style="min-height: 48px; display: flex; justify-content: space-between; align-items: center; border: none; border-bottom: 1px solid #EAEEF2; background: transparent; font: inherit; font-size: 14px; color: #0B57D0; font-weight: 600; padding: 0"><span>Rent receipts for HRA (PDF, financial year)</span><span>›</span></button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+      <a href="V2-Bill-Add.html" style="min-height: 48px; border-radius: 24px; border: 1px solid #8C959F; box-sizing: border-box; font-size: 14px; font-weight: 600; color: #1F2328; display: flex; align-items: center; justify-content: center; text-decoration: none">Change rent from…</a>
+      <button type="button" style="min-height: 48px; border-radius: 24px; border: 1px solid #8C959F; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1F2328">Moving out</button>
+    </div>
+    <span style="font-size: 12px; color: #424A53">Only your share counts in Money out. Flatmates' shares show on People. Moving out records the deposit coming back (not income).</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
