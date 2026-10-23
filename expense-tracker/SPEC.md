@@ -213,7 +213,7 @@ Every table also has `uid` (UUID string, unique), `created_at` and `updated_at`.
 - **Work expenses (7.4):** a credit from the employer matching open work items is offered as "Reimbursement" (not income) and clears them; mismatch → tick which items, difference asked.
 - **Loans:** EMI debits → spent, Loans & EMI (fixed). Money borrowed (1.7 "Lending me") creates a balance I owe, not income. Lending cash: Add › Spent › Split › "only them" = they owe the full amount.
 - **Cash check (7.7):** enter cash actually held; difference recorded as untracked cash spending, split into expenses, money received, or a plain correction.
-- **Fixing a payment:** amount and date of any captured payment are editable (original SMS kept, edit logged). Only manual entries can be deleted; captured ones use "Don't count".
+- **Fixing a payment:** amount and date of any captured payment are editable (original SMS kept, edit logged). "Remove this payment…" on 2.4 (also Money › Select › Ignore / delete): a captured payment becomes "Don't count" or "Duplicate" (row and SMS kept so it is never re-created, totals drop it); a manual entry is deleted. Both show Undo for 10 s; deleted manual entries stay recoverable for 7 days.
 - **Add person (7.5):** name required; group, UPI IDs and phone optional (typed, contacts never read). Tenant → continues to rent setup.
 - **New trip (7.6):** name, dates, members; turns trip mode on; new payments suggested as trip splits until the end date.
 - **First use / empty states:** Today shows R5; Money, Month and People show one line on what will appear.
