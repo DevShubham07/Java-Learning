@@ -40,7 +40,8 @@ A single-user Android app (sideloaded APK) that is a complete personal money man
 
 ### 1.3 Navigation
 Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear icon on Today. Detail, split, category, person, "not mine", "money received" etc. open as **bottom sheets** over the current tab.
-Not reached by a button (by design): 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today (nothing left / 2+ days unanswered); R5 is Today when nothing was captured; A4 shows when Ask is tapped on Money without the AI model. Back from any reused v1 screen returns to the v2 screen that opened it.
+Not reached by a button (by design): 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today (nothing left / 2+ days unanswered); R5 is Today when nothing was captured; A4 shows when Ask is tapped on Money without the AI model; P1 is shown when the app opens while App lock is on. Back from any reused v1 screen returns to the v2 screen that opened it.
+Context rules (the static wireframes can only draw one target per button): a sheet's Close and Save return to the screen that opened it; onboarding steps O1–C9 have Back to the previous step; when O2 (Banks & apps), O3 (a new place) or O4 (review time & lock) is opened from Settings or Places, it shows no step bar, Back returns there and the main button reads **Save** and returns there; 6.6 Restore opened from 6.4 Backup goes Back to 6.4, and after "Add to what's here" lands on Today (only "Replace everything" on a new phone continues to O1).
 
 ### 1.4 Screen map (v2 artboard titles)
 | Area | Screens |
