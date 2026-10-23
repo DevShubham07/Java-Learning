@@ -33,7 +33,7 @@ A static page can draw only one target per button, so these rules apply in the a
 | 3.3 · Year view | [png](screens/v2/V2-Year.png) | [html](wireframes/v2/V2-Year.html) | 3.1 |
 | 4.1 · Rent & bills this month | [png](screens/v2/V2-Bills.png) | [html](wireframes/v2/V2-Bills.html) | 4.4, 3.1, 4.3, 4.2 |
 | 4.2 · Rent I pay (split with flatmates) | [png](screens/v2/V2-Rent-Pay.png) | [html](wireframes/v2/V2-Rent-Pay.html) | 4.4, 4.1 |
-| 4.3 · Rent I collect (tenant) | [png](screens/v2/V2-Rent-Collect.png) | [html](wireframes/v2/V2-Rent-Collect.html) | 4.4, 4.1 |
+| 4.3 · Rent I collect (tenant) | [png](screens/v2/V2-Rent-Collect.png) | [html](wireframes/v2/V2-Rent-Collect.html) | 5.6, 4.4, 4.1 |
 | 4.4 · Add a monthly bill or rent | [png](screens/v2/V2-Bill-Add.png) | [html](wireframes/v2/V2-Bill-Add.html) | 4.1 |
 | 5.1 · Add (sheet): spent or received | [png](screens/v2/V2-Add.png) | [html](wireframes/v2/V2-Add.html) | 5.6, 1.6, 1.3, 1.2 |
 | 5.2 · People | [png](screens/v2/V2-People.png) | [html](wireframes/v2/V2-People.html) | 5.1, 2.1, 3.1, 5.2, 5.5, 5.3, 4.3, 1.2, 5.4, 7.6 |

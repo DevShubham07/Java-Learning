@@ -140,7 +140,7 @@ Every table also has `uid` (UUID string, unique), `created_at` and `updated_at`.
 | **Category** | id, name, icon, kind (spend\|income), is_fixed (rent/bills/subscriptions/EMI), monthly_budget_paise?, sort, archived |
 | **Merchant** | id, raw_identifier (UPI ID or SMS name), display_name, default_category_id, default_place_id, usual_people_ids, always_use_category (bool), default_type? (e.g. invested) |
 | **Account** | id, name, bank, last4, type (savings\|current\|credit_card\|debit_card\|wallet\|cash), linked_upi_ids, is_mine, confirmed, last_balance_paise, balance_as_of, credit_limit_paise, statement_paise, due_date, hidden |
-| **Person** | id, name, phone?, upi_ids, **group** (friend \| flatmate \| tenant \| landlord \| family \| other), archived, merged_into_id? |
+| **Person** | id, name, phone?, upi_ids, **group** (friend \| flatmate \| tenant \| landlord \| family \| other), merged_into_id? |
 | **Split** | id, transaction_id, person_id (null = me), share_paise, paid_paise, method (equal\|amount\|percent\|shares), shares? |
 | **Settlement** | id, person_id, amount_paise, direction (they_paid_me\|i_paid_them), method (cash\|upi), occurred_at, transaction_id?, write_off (bool) |
 | **Bill** | id, name, **direction** (pay\|collect), kind (rent\|electricity\|wifi\|maintenance\|house_help\|gas\|phone\|other), amount_paise, amount_from_month?, variable (bool), due_day (1–31), counterparty_person_id (landlord or tenant), pay_via (landlord_direct\|through_flatmate), via_person_id?, match_upi_ids, match_names, account_id, category_id, split_person_ids (flatmates), deposit_paise?, lease_start?, lease_end?, active |
@@ -156,7 +156,7 @@ Every table also has `uid` (UUID string, unique), `created_at` and `updated_at`.
 ### Key formulas
 - **My share** of a transaction = its Split row with person_id = null; with no splits, the full amount. Equal splits: leftover paise go to me.
 - **Person balance** = Σ their share on transactions I paid + their share of bills I pay − Σ my share on transactions they paid − settlements ± borrowed/lent. Rent a tenant owes is tracked on BillPeriod, not as a balance.
-- **Delete person** blocked while balance ≠ 0 or a collect bill is pending; archive always allowed.
+- **Delete person** blocked while balance ≠ 0 or a collect bill is pending; there is no archive.
 - **Editing an old split** that was already settled creates a new balance for the difference; settlements are never edited silently.
 
 ### AI tools (optional model, fixed queries only)
@@ -187,7 +187,7 @@ Every table also has `uid` (UUID string, unique), `created_at` and `updated_at`.
 
 ### 4.3 Rent & bills
 - A Bill is **pay** (rent to landlord, electricity, Wi-Fi, house help…) or **collect** (rent from each tenant). Each month gets a BillPeriod: pending → partial → done.
-- Auto-match: a debit to / credit from the bill's UPI IDs or names in the month (amount within ±10% when variable) marks it done; a credit from a tenant is typed income (rent collected). Manual "Mark paid / received" asks: full or part, cash or UPI, account. Cash rent can be added via 5.6.
+- Auto-match: a debit to / credit from the bill's UPI IDs or names in the month (amount within ±10% when variable) marks it done; a credit from a tenant is typed income (rent collected). There is no manual "Mark paid": status only changes when a matching payment arrives or is added. Cash paid or received (rent, house help) is added with + (5.1 / 5.6) and matches the bill.
 - **Rent I pay with flatmates:** my share counts in Money out; each flatmate's share is added to their balance every month automatically.
 - **Paid through a flatmate:** pay_via = through_flatmate; my payment to that flatmate marks my part of the month done.
 - **Rent change:** editing the amount asks "from which month"; past months never change.
@@ -230,7 +230,7 @@ SMS + notification for one payment → merge (amount, 5 min, ref no.) · same am
 1. **Foundation:** project, encrypted Room DB (§3), app lock, bottom nav + empty tabs, cash Add sheet, CSV export. *Done when* cash entries appear on Money and Month totals are right.
 2. **Capture & SMS engine (§6):** SMS receiver, inbox import, bank templates, notification listener, dedupe, SMS types, account strip, refunds/failed/self-transfer. *Done when* a real week is captured with no misses or doubles and the test corpus passes 100% on direction and amount.
 3. **Answering:** Today cards, pinned nightly notification with actions and undo, Split / Not mine / Category / Money received sheets, backlog view, merchant memory. *Done when* 10 payments are answered in under 60 s and the notification can't be dismissed early.
-4. **People:** groups, search, manage (edit, merge, archive, delete rules), add person, balances, settlements, auto-match, WhatsApp reminder, trips.
+4. **People:** groups, search, manage (edit, merge, delete rules), add person, balances, settlements, auto-match, WhatsApp reminder, trips.
 5. **Month:** In / Out / Saved / invested, honest income rules, categories and budgets (incl. whole-month), fixed vs everyday, year view, CSV statement, cash check.
 6. **Rent & bills:** Bill + BillPeriod, pay and collect, flatmate splits, pay-through-flatmate, tenant ledger, rent change, end tenancy, auto-match, setup step 6.2, HRA/rental tax exports. *Done when* a month of rent paid and collected marks itself without manual taps.
 7. **Location:** GPS logger, saved places, offline POIs, place on every card.
