@@ -2,7 +2,7 @@
 
 Every screen to build. Open the PNG to see it and the HTML for exact text, sizes and links. "Goes to" lists where each button or link leads (sheets close back to the screen underneath).
 
-Rows with no entry from another screen are system surfaces or states: 1.1 notification, 7.1 lock screen, 7.2 widget (all open Today), 1.5 and 1.8 (states of Today).
+No button leads to these, by design: 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today; R5 is Today when nothing was captured; A4 shows when Ask is tapped on Money without the AI model.
 
 ## v2 · current (source of truth)
 
@@ -10,28 +10,28 @@ Rows with no entry from another screen are system surfaces or states: 1.1 notifi
 |---|---|---|---|
 | 1.1 · Pinned nightly notification | [png](screens/v2/V2-Notif.png) | [html](wireframes/v2/V2-Notif.html) | 1.4, 1.3, 1.2 |
 | 1.2 · Today: confirm payments | [png](screens/v2/V2-Today.png) | [html](wireframes/v2/V2-Today.html) | 5.1, 1.6, 2.1, 3.1, 1.4, 5.2, 1.7, 6.1, 1.3, 1.2 |
-| 1.3 · Split (sheet) | [png](screens/v2/V2-Split-Sheet.png) | [html](wireframes/v2/V2-Split-Sheet.html) | 1.2 |
+| 1.3 · Split (sheet) | [png](screens/v2/V2-Split-Sheet.png) | [html](wireframes/v2/V2-Split-Sheet.html) | S3, 1.2 |
 | 1.4 · Not mine (sheet) | [png](screens/v2/V2-Not-Mine.png) | [html](wireframes/v2/V2-Not-Mine.html) | 1.2 |
 | 1.5 · Today: all confirmed | [png](screens/v2/V2-Today-Done.png) | [html](wireframes/v2/V2-Today-Done.html) | 5.1, 4.1, 2.1, 3.1, 5.2, 6.1, 1.2 |
 | 1.6 · Pick category (sheet) | [png](screens/v2/V2-Category-Sheet.png) | [html](wireframes/v2/V2-Category-Sheet.html) | 1.2 |
 | 1.7 · Money received: what is it? (sheet) | [png](screens/v2/V2-Received-Sheet.png) | [html](wireframes/v2/V2-Received-Sheet.html) | 7.4, 1.2 |
 | 1.8 · Today after days unanswered | [png](screens/v2/V2-Today-Backlog.png) | [html](wireframes/v2/V2-Today-Backlog.html) | 5.1, 2.1, 3.1, 5.2, 6.1, 1.2 |
-| 2.1 · Money: all | [png](screens/v2/V2-Money.png) | [html](wireframes/v2/V2-Money.html) | T3/T5, T1, 2.5, 5.1, 2.2, 2.3, 2.1, 3.1, 5.2, 1.2, 2.4 |
+| 2.1 · Money: all | [png](screens/v2/V2-Money.png) | [html](wireframes/v2/V2-Money.html) | A1/A2, T3/T5, T1, 2.5, 5.1, 2.1, 2.2, 2.3, 3.1, 5.2, 1.2, 2.4 |
 | 2.2 · Money: received | [png](screens/v2/V2-Money-In.png) | [html](wireframes/v2/V2-Money-In.html) | 5.1, 2.1, 3.1, 5.2, 1.2 |
 | 2.3 · Money: ignored & unreadable SMS | [png](screens/v2/V2-Money-SMS.png) | [html](wireframes/v2/V2-Money-SMS.html) | 5.1, 2.1, 3.1, 5.2, 1.2 |
 | 2.4 · Payment detail (sheet) | [png](screens/v2/V2-Txn-Sheet.png) | [html](wireframes/v2/V2-Txn-Sheet.html) | 2.1, 1.3 |
 | 2.5 · One account selected | [png](screens/v2/V2-Account.png) | [html](wireframes/v2/V2-Account.html) | K8, 5.1, 7.7, 2.1, 3.1, 5.2, 1.2, 2.4 |
-| 3.1 · Month: in, out, saved | [png](screens/v2/V2-Month.png) | [html](wireframes/v2/V2-Month.html) | 5.1, 4.1, 7.3, 2.2, 2.1, 3.2, 3.1, 5.2, 1.2, 3.3 |
-| 3.2 · Month: where it went (scrolled) | [png](screens/v2/V2-Month-Spend.png) | [html](wireframes/v2/V2-Month-Spend.html) | 5.1, 2.1, 3.1, 5.2, 1.2 |
+| 3.1 · Month: in, out, saved | [png](screens/v2/V2-Month.png) | [html](wireframes/v2/V2-Month.html) | 5.1, 4.1, 7.3, 2.1, 2.2, 3.1, 3.2, 5.2, 1.2, 3.3 |
+| 3.2 · Month: where it went (scrolled) | [png](screens/v2/V2-Month-Spend.png) | [html](wireframes/v2/V2-Month-Spend.html) | I3, I4, I2, 5.1, 2.1, 3.1, 5.2, 1.2 |
 | 3.3 · Year view | [png](screens/v2/V2-Year.png) | [html](wireframes/v2/V2-Year.html) | 3.1 |
 | 4.1 · Rent & bills this month | [png](screens/v2/V2-Bills.png) | [html](wireframes/v2/V2-Bills.html) | 4.4, 3.1, 4.3, 4.2 |
 | 4.2 · Rent I pay (split with flatmates) | [png](screens/v2/V2-Rent-Pay.png) | [html](wireframes/v2/V2-Rent-Pay.html) | 4.4, 4.1 |
 | 4.3 · Rent I collect (tenant) | [png](screens/v2/V2-Rent-Collect.png) | [html](wireframes/v2/V2-Rent-Collect.html) | 4.4, 4.1 |
 | 4.4 · Add a monthly bill or rent | [png](screens/v2/V2-Bill-Add.png) | [html](wireframes/v2/V2-Bill-Add.html) | 4.1 |
 | 5.1 · Add (sheet): spent or received | [png](screens/v2/V2-Add.png) | [html](wireframes/v2/V2-Add.html) | 5.6, 1.6, 1.3, 1.2 |
-| 5.2 · People | [png](screens/v2/V2-People.png) | [html](wireframes/v2/V2-People.html) | 5.1, 2.1, 3.1, 5.5, 5.2, 5.3, 1.2, 7.6, 5.4 |
-| 5.3 · Person (sheet) | [png](screens/v2/V2-Person-Sheet.png) | [html](wireframes/v2/V2-Person-Sheet.html) | 5.5, 5.2 |
-| 5.4 · Trip | [png](screens/v2/V2-Trip.png) | [html](wireframes/v2/V2-Trip.html) | 5.2 |
+| 5.2 · People | [png](screens/v2/V2-People.png) | [html](wireframes/v2/V2-People.html) | 5.1, 2.1, 3.1, 5.2, 5.5, 5.3, 1.2, 5.4, 7.6 |
+| 5.3 · Person (sheet) | [png](screens/v2/V2-Person-Sheet.png) | [html](wireframes/v2/V2-Person-Sheet.html) | S6, S7/S8, 5.2, 5.5 |
+| 5.4 · Trip | [png](screens/v2/V2-Trip.png) | [html](wireframes/v2/V2-Trip.html) | S9, 5.2 |
 | 5.5 · Manage people (search, edit, delete) | [png](screens/v2/V2-People-Manage.png) | [html](wireframes/v2/V2-People-Manage.html) | 5.2, 7.5 |
 | 5.6 · Add (sheet): money received in cash | [png](screens/v2/V2-Add-Received.png) | [html](wireframes/v2/V2-Add-Received.html) | 5.1, 4.1, 1.2 |
 | 6.1 · Settings (one page) | [png](screens/v2/V2-Settings.png) | [html](wireframes/v2/V2-Settings.html) | P6/P7, P1, O2, P4, L5–L7, P9, 6.3, 6.4, 4.1, 1.2 |

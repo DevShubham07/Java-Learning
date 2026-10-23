@@ -40,7 +40,7 @@ A single-user Android app (sideloaded APK) that is a complete personal money man
 
 ### 1.3 Navigation
 Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear icon on Today. Detail, split, category, person, "not mine", "money received" etc. open as **bottom sheets** over the current tab.
-Not reached by a button (by design): 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today (nothing left / 2+ days unanswered). Back from any reused v1 screen returns to the v2 screen that opened it.
+Not reached by a button (by design): 1.1 notification, 7.1 lock screen and 7.2 widget are system surfaces that open Today; 1.5 and 1.8 are states of Today (nothing left / 2+ days unanswered); R5 is Today when nothing was captured; A4 shows when Ask is tapped on Money without the AI model. Back from any reused v1 screen returns to the v2 screen that opened it.
 
 ### 1.4 Screen map (v2 artboard titles)
 | Area | Screens |
