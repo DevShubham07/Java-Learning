@@ -57,11 +57,23 @@ Bottom bar: **Today · Money · (+) Add · Month · People**. Settings = gear ic
 - **Onboarding:** O0 Welcome, O1 Permissions, O2 Banks & apps, O3 First places, O4 Review time & lock, C9 Import past SMS. Insert v2 **6.2 Rent step** as step 5, before Import.
 - P1 App lock · P4 Permission health · P6/P7 AI model & map data · P2/P3 Backup & export · P9 Merchant memory & rules · L5–L7 Places · A1/A2 Ask (opened from a search bar on Money, only when the AI model is installed) · A4 Assistant not installed.
 - Opened from v2 buttons: **S3** Someone else paid (= 1.3 with "Someone else paid") · **S7/S8** Settle up (Person sheet › Record payment) · **I3** Budgets (3.2 › Edit budgets; add a "Whole month" limit) · **I4** Subscriptions and **I2** Spending map (3.2 buttons) · **K1/K10** New account found / edit account · **R5** Nothing to answer today (Today empty state).
+- Features carried over from v1 (do not lose them):
+  - **T1 Filters** — Money › Filters: date range, method, person, place, trip, answer status.
+  - **T3/T5 Select many** — Money › Select: recategorise, split, merge duplicates, ignore in bulk.
+  - **Full / Your share switch** (T6) — on Money (2.1), remembered.
+  - **K4/K5 Bank account detail** — on 2.5 when a bank account is selected: in / out / net per period, linked UPI IDs, rename / merge / hide / not mine.
+  - **K8 Manage accounts** — 2.5 › Manage accounts: add manually, wallets, hidden accounts.
+  - **I2 breakdown by merchant and by account** — tabs on 3.2 (Category · Merchant · Account).
+  - **I1 day / week trend** — Days · Weeks · Months toggle on 3.3.
+  - **R3 "Name this payee"** — on Today cards with an unknown UPI ID (E1); name once, used for every later payment.
+  - **A3 AI one-line summary** — in the nightly notification, only when the model is installed.
+  - **S9 Trip settle-up details** — net per person and "Pay by UPI", opened from 5.4.
+  - **S6 reminder preview** — WhatsApp reminder text preview on the Person sheet.
 - Restyle rules: 48 dp targets, sheets, plain words.
 - C10 Unparsed SMS is replaced by the "Couldn't read" card on 2.3.
 
 ### 1.6 Do not build from v1
-R1–R4 and R6 review flow (replaced by Today and 1.8), S1/S2/S4 split screens (replaced by 1.3), S9 trip settle (inside 5.4), H1/H2 Home, T1–T5 Transactions (replaced by Money), K4–K8 Accounts pages (replaced by the account strip), I1 Insights (replaced by Month), More/Settings, v1 Notification set (replaced by 6.3). **Remove the card-due reminder entirely.**
+R1, R2, R4 and R6 review flow (replaced by Today and 1.8; R3 only for its payee-naming field), S1/S2/S4 split screens (replaced by 1.3), H1/H2 Home, T1 list and T2/T4 detail (replaced by Money and 2.4), I1 Insights screen (replaced by Month; its trend lives on 3.3), More/Settings, v1 Notification set (replaced by 6.3). **Remove the card-due reminder entirely.**
 
 ### 1.7 Targets
 APK under 15 MB without the AI model · cold start to Today under 1 s · answering 10 payments under 60 s · cash add under 10 s · optional AI model ≈ 2.4 GB downloaded later · offline map + places for Delhi NCR under 150 MB · location log every 15–30 min, paused when stationary.
